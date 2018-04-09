@@ -24,8 +24,8 @@ repeat   # !!!!!repeat!!!!!!
 
 library(ISwR)
 data("thuesen"); head(thuesen)
-print(head(data(thuesen)))
-plot(thuesen$blood.glucose, thuesen$short.velocity)
+#print(head(data(thuesen))) # this doesn't make expected result
+plot(thuesen$blood.glucose, thuesen$short.velocity) # !!!!ploting scatter plot
 
 attach(thuesen)  # after attaching, thusen$blood.glucose --> blood.glucose
 blood.glucose
@@ -64,7 +64,7 @@ print(thue5)  ### NULL ..... ?!?!?!?. with doesn't save data while within does
 
 
 #####################  external dataset ################## (excel, spss data)
-setwd("/Users/leejunho/Desktop/aliyun_0319")
+setwd("/Users/leejunho/Desktop/git/python3Env/group_study/NOT_USUALLY_VISIT/statistic_group_study/R_language/R_lecture/aliyun_0319")
 getwd()
 txt<-read.table("thuesen.txt", header = T)   # read in a txt file data, include the title in the fisrt row on data format with header=T
 txt0<-read.table("thuesen.txt", header = F)  # read in a txt file data, the titile will contains in data itself

@@ -70,28 +70,59 @@
 #x.2 <- c("a","B",'C'); class(x.2)
 #x.3 <- c(T,T,F,T,F); class(x.3)
 
-c("Harry","Dewey","Louie")         # output : "Harry" "Dewey" "Louie"
-cat(c("Harry","Dewey","Louie"))    # output : Harry Dewey Louie  
-cat("Harry","Dewey","Louie","\n")  # output : Harry Dewey Louie 
-c("what is \"R\"?\n")
-cat("what is \"R\"?\n")
-cat("what is R ?\n")
+#c("Harry","Dewey","Louie")         # output : "Harry" "Dewey" "Louie"
+#cat(c("Harry","Dewey","Louie"))    # output : Harry Dewey Louie  
+#cat("Harry","Dewey","Louie","\n")  # output : Harry Dewey Louie 
+#c("what is \"R\"?\n")              # cat to remove double quote
+#cat("what is \"R\"?\n")
+#cat("what is R ?\n")
 
-x<-c(red="huey",blue="dewey",green="louie");  # adding tags : tag name : "red" "blue" "green"
-x.1<-c("Harry","Dewey","Louie")
-names(x); class(names(x)); class(x)
-names(x.1); class(names(x.1)); class(x.1)
+#x<-c(red="huey",blue="dewey",green="louie");  # adding tags : tag name : "red" "blue" "green"
+#x.1<-c("Harry","Dewey","Louie")
+#names(x); class(names(x)); class(x)
+#names(x.1); class(names(x.1)); class(x.1)
 #print(x); print(x.1)        
         
-y.1<-c("1"=1, "2"=2, "3"=3); #print(y.1)
-names(y.1); class(names(y.1)); class(y.1);  # adding tags : tag name : "1", "2","3"
+#y.1<-c("1"=1, "2"=2, "3"=3); #print(y.1)
+#names(y.1); class(names(y.1)); class(y.1);  # adding tags : tag name : "1", "2","3"
 # so the tag has to be in format of string, the type of the data store inside is flexible.
 
-z.0 <- c(F,3); print(z.0);
-z.1 <- c(3.14,"abc"); print(z.1); class(z.1); names(z.1);  # so the vector inside has to be same type, the 3.14 would be change into string
-z.3 <- c(FALSE,"abc"); print(z.3)
-z.4 <- c("1",3.14); class(z.4); print(z.4);
-z.4 <- as.double(z.4); class(z.4); print(z.4)
+#z.0 <- c(F,3); print(z.0);
+#z.1 <- c(3.14,"abc"); print(z.1); class(z.1); names(z.1);  # so the vector inside has to be same type, the 3.14 would be change into string
+#z.3 <- c(FALSE,"abc"); print(z.3)
+#z.4 <- c("1",3.14); class(z.4); print(z.4);
+#z.4 <- as.double(z.4); class(z.4); print(z.4)
+#z.5 <- c(3.14,"abc") ; print(z.5); cat(z.5); 
+#class(cat(z.5))
+
+#A=seq(from=4, to=9.1); print(A); class(A)   # you can see, seq always produces integer format 
+#A.1 = seq(4,9); print(A.1); class(A.1)
+#A.2<- seq(4,12,by=3); print(A.2)
+#A.3 <- 4:9; print(A.3); cat(A.3); 
+#print(cat(A.3))
+
+oops <- c(7,9,13)
+t = rep(oops,4); print(t); rep(oops,c(4,4,4))
+1:3 ;rep(oops,1:3)
+rep(oops, c(1,1,2))
+rep(1:2, c(10,15))
+rep(1:2, each=5); rep(1:2, 5)
+rep(1:3, seq(1,3)); cat(rep(1:3, seq(1,3)))   # cat to remote output of "[]"
+
+x <- 1:12; print(x); 
+#x <- 0:12; print(x); 
+cat(x)
+xd1 <- (dim(x) <- c(4,3)); print(x); print(xd1)  # dimention
+xd2 <- (dim(x)<-c(2,2,3)); print(x); print(xd2)
+
+y <- seq(1,12)
+dim(y)<-c(3,4); print(y);
+
+z.0 <-matrix(1:12, nrow=3); print(z.0)              # fill the matrix column first
+z.1 <-matrix(1:12, nrow=3, byrow = T); print(z.1)   # fill in row first
+
+
+
 
 
 
